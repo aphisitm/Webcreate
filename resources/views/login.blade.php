@@ -19,8 +19,10 @@
 <body class="hold-transition skin-blue sidebar-mini">
   <style type="text/css">
     body {
-      background-color: #DADADA;
-    }
+    background-image: url("img/dark_blue_background-wallpaper-1920x1080.jpg");
+  
+ 
+}
     body > .grid {
       height: 100%;
     }
@@ -72,18 +74,19 @@
 </head>
 <body>
 
+
+<!-- ddddddddddd -->
 <div class="ui middle aligned center aligned grid">
   <div class="column">
-    <h2 class="ui teal image header">
-      <img src="./Login Example - Semantic_files/logo.png" class="image">
-      <div class="content">
-        Log-in to your account
-      </div>
-    </h2>
-    <form class="ui large form" action="/login" method="post">
-    <input type="hidden" name="_token" value="{{ csrf_token() }}">
     
+    <form class="ui large form" action="/login" method="post">
+    <input type="hidden" name="_token" value="{{ csrf_token() }}">    
       <div class="ui stacked segment">
+
+      <h4 class="ui teal horizontal divider header">
+        <i class="users icon"></i>
+         Log-in to your account
+      </h4>
         <div class="field">
           <div class="ui left icon input">
             <i class="user icon"></i>
@@ -104,7 +107,7 @@
     </form>
 
     <div class="ui message">
-      New to us? <a href="">Sign Up</a>
+      New to us? <a href="/register">Sign Up</a>
     </div>
   </div>
 </div>

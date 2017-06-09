@@ -34,7 +34,7 @@ class LoginController extends Controller
         session()->put('s_user_name',$data->name);
         session()->put('s_user_email',$data->email);
         session()->put('s_user_usertype',$data->usertype);
-       
+       session()->put('s_user_accountname',$data->accountname);
 
         // if($remember_me == 1){
         //     Cookie::queue('c_host_id',$data->user_id,525600);

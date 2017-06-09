@@ -39,7 +39,7 @@
     </div>
 
     <!-- Item Listing -->
-    <table class="table table-bordered">
+    <table class="table table-bordered ui celled table">
       <tr>
         <th>Title</th>
         <th>Detail</th>
@@ -72,7 +72,7 @@
               <li v-if="pagination.current_page > 1">
                   <a href="#" aria-label="Previous"
                      @click.prevent="changePage(pagination.current_page - 1)">
-                      <span aria-hidden="true">«</span>
+                      <span aria-hidden="true"><i class="left chevron icon"></i></span>
                   </a>
               </li>
               <li v-for="page in pagesNumber"
@@ -83,7 +83,7 @@
               <li v-if="pagination.current_page < pagination.last_page">
                   <a href="#" aria-label="Next"
                      @click.prevent="changePage(pagination.current_page + 1)">
-                      <span aria-hidden="true">»</span>
+                      <span aria-hidden="true"><i class="right chevron icon"></i></span>
                   </a>
               </li>
           </ul>

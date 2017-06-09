@@ -26,13 +26,19 @@ Route::get('login', 'LoginController@index');
 Route::post('login', 'LoginController@postForm');
 Route::get('logout', 'LoginController@logout');
 
+Route::get('register', 'RegisterController@index');
+Route::resource('register', 'RegisterController');
+
 
 Route::group(['prefix' => 'brand'], function () {
 
 Route::get('home', 'BrandConroller@index')->name('home');
 
+
+Route::resource('myprofile', 'ProfileController');
+
+
 Route::get('mycampaign', 'CampaignConroller@myCampaign');
-Route::get('myprofile', 'ProfileController@index');
 Route::resource('campaignitems','CampaignConroller');
 
 });
